@@ -107,6 +107,14 @@
       }
 
 
+      function resetScore(){
+        score.wins=0;
+        score.losses=0;
+        score.ties=0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+      }
+
       function updateScoreElement(){
              document.querySelector('.js-score').innerHTML=`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
       }
